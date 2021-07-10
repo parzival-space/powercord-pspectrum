@@ -16,7 +16,7 @@ The builds of PSpectrum get automatically pushed to this Repository using GitHub
 ## Styling
 
 You can add support for your themes by modifying the styles of the #pspectrum-visualizer.<br>
-For example, this code adds support for the Crearts Theme:
+For example, this code adds support for the <a href="https://github.com/CorellanStoma/CreArts-Discord">Crearts</a> Theme:
 ```css
 #pspectrum-visualizer {
   z-index: 0 !important;
