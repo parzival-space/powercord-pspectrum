@@ -6,6 +6,11 @@ You can find the source for the executeable here: <a href="https://github.com/ma
 
 The builds of PSpectrum get automatically pushed to this Repository using GitHub Actions.
 
+## Support
+
+If you need help, please create an issue in the "Issues" tab and do not contact the powercord team. I will look into it as soon as possible.</br>
+The powercord team will not give you support (this is an unsupported plugin) and we don't need to stress them out more than they already are.
+
 ## Installation
 
 1. Go to your powercord plugins folder. Run ``git clone https://github.com/malte-linke/powercord-pspectrum.git``
