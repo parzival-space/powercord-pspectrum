@@ -1,52 +1,33 @@
 const { Plugin } = require("powercord/entities");
-const Analyser = require('./lib/PSpectrum');
-const Render = require('./lib/Render.js');
+const { inject, uninject } = require("./lib/Injector");
+
+// import settings component
+const Settings = require("./components/Settings");
 
 module.exports = class PSpectrum extends (Plugin) {
 
-  inject() {
-    let trys = 0;
-
-    try {
-
-      // init & spawn PSpectrum.exe
-      this.watcher = new Analyser();
-      this.watcher.spawn();
-
-      // init & spawn Render
-      this.render = new Render();
-      this.watcher.onData(data => this.render.drawNewFrame(data));
-
-      console.log(`%c[PSpectrum]`, `color: lime;`, `* feeling the bass *`);
-
-    } catch (e) {
-      this?.watcher?.kill();
-      this?.render?.destroy();
-
-      console.log(`%c[PSpectrum/Error]`, `color: red;`, `Fu***! Another error: ${e}. Retrying... (fail ${trys} / 10)`);
-
-      if (trys < 10) {
-        trys++;
-
-        let _t = setTimeout(() => {
-          this.startPlugin();
-          clearTimeout(_t);
-        });
-      }
-    }
-  }
-
   startPlugin() {
-    if (document.readyState === "complete") this.inject();
-    else document.addEventListener("readystatechange", () => {
-      if (document.readyState !== "complete") return;
-      this.inject();
+    // register settings
+    powercord.api.settings.registerSettings('pspectrum', {
+      category: this.entityID,
+      label: 'PSpectrum',
+      render: Settings
     });
+
+
+    // injects the plugin
+    inject(
+      this,
+      () => console.log(`%c[PSpectrum/Info]`, `color: lime;`, `Successfully injected PSpectrum!`),
+      (f) => console.log(`%c[PSpectrum/Failed]`, `color: red;`, `Failed to inject PSpectrum: ${f}. Retrying...`)
+    );
   }
 
   pluginWillUnload() {
-    this.watcher.kill();
-    this.render.destroy();
-    console.log(`%c[PSpectrum]`, `color: lime;`, `Unloaded.`);
+    // uninjects the plugin
+    uninject();
+
+    // unregister settings tab
+    powercord.api.settings.unregisterSettings('pspectrum');
   }
 };
