@@ -2,6 +2,6 @@
   "name": "PSpectrum Audio Visualizer",
   "description": "Remember AudioViz? Good times. Shows a audio visualizer in Discord. Only works for windows.",
   "author": "Parzival#0002",
-  "version": "1.0.6",
+  "version": "1.1.0",
   "license": "MIT"
 }
