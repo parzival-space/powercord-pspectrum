@@ -47,6 +47,13 @@ Now you can specify custom color for each user state:
 }
 ```
 
+### Also new since 1.2.0
+
+You can now customize the colors of the visualizer without the need to use quick css.<br>
+Just enable 'Manual Theming' in the settings and you get a new color picker for each user status.<br>
+
+<img src="https://i.imgur.com/eXlE6QQ.png">
+
 ---
 
 ## Demo
