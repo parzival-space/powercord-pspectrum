@@ -26,18 +26,24 @@ For example, this code adds support for the <a href="https://github.com/Corellan
 #pspectrum-visualizer {
   z-index: 0 !important;
   border-radius: var(--radius-primary);
-  --pspectrum-color: var(--accent-primary);
+  --pspectrum-online-color: var(--accent-primary);
+  --pspectrum-idle-color: var(--accent-primary);
+  --pspectrum-dnd-color: var(--accent-primary);
+  --pspectrum-invisible-color: var(--accent-primary);
 }
 ```
 
-### Since 1.0.1
+### Since 1.2.0
 
-You can now recolor the visualizer using the ``--pspectrum-color`` css variable.<br>
-If this variable is not set the visualizer trys to fallback to the ``--spotify-color`` variable and if nothing works the color will get set to ``#1ed860``.
-Below you can see an css example to customize the visualizers color:
+The ``--pspectrum-color`` css variable has been splitted into four sub-variables (for each user status one: online, idle, dnd and invisible).<br>
+PSpectrum still trys to use ``--spotify-color``, ``--pspectrum-color`` and ``#1ed860`` as fallback values, so your quick css and themes should still work.<br>
+Now you can specify custom color for each user state:
 ```css
 #pspectrum-visualizer {
-  --pspectrum-color: #FF0000;
+  --pspectrum-online-color: #1ED860;
+  --pspectrum-idle-color: #D8D51E;
+  --pspectrum-dnd-color: #D81E1E;
+  --pspectrum-invisible-color: #4F4F4F;
 }
 ```
 
@@ -45,4 +51,4 @@ Below you can see an css example to customize the visualizers color:
 
 ## Demo
 
-<img src="https://i.imgur.com/vbEoXAm.gif"><img src="https://i.imgur.com/jOZhMS2.gif">
+<img src="https://i.imgur.com/1qIn0Ws.gif">
