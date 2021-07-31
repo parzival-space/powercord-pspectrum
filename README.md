@@ -24,7 +24,6 @@ You can add support for your themes by modifying the styles of the #pspectrum-vi
 For example, this code adds support for the <a href="https://github.com/CorellanStoma/CreArts-Discord">Crearts</a> Theme:
 ```css
 #pspectrum-visualizer {
-  z-index: 0 !important;
   border-radius: var(--radius-primary);
   --pspectrum-online-color: var(--accent-primary);
   --pspectrum-idle-color: var(--accent-primary);
