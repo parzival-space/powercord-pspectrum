@@ -89,3 +89,4 @@ typings/
 
 # ignore dlls
 bin/*.dll
+temp
