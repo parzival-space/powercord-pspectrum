@@ -4,22 +4,30 @@ const { inject, uninject } = require("./lib/Injector");
 // import settings component
 const Settings = require("./components/Settings");
 
-module.exports = class PSpectrum extends (Plugin) {
-
+module.exports = class PSpectrum extends Plugin {
   startPlugin() {
     // register settings
-    powercord.api.settings.registerSettings('pspectrum', {
+    powercord.api.settings.registerSettings("pspectrum", {
       category: this.entityID,
-      label: 'PSpectrum',
-      render: Settings
+      label: "PSpectrum",
+      render: Settings,
     });
-
 
     // injects the plugin
     inject(
       this,
-      () => console.log(`%c[PSpectrum/Info]`, `color: lime;`, `Successfully injected PSpectrum!`),
-      (f) => console.log(`%c[PSpectrum/Failed]`, `color: red;`, `Failed to inject PSpectrum: ${f}. Retrying...`)
+      () =>
+        console.log(
+          `%c[PSpectrum/Info]`,
+          `color: lime;`,
+          `Successfully injected PSpectrum!`
+        ),
+      (f) =>
+        console.log(
+          `%c[PSpectrum/Failed]`,
+          `color: red;`,
+          `Failed to inject PSpectrum: ${f}. Retrying...`
+        )
     );
   }
 
@@ -28,6 +36,6 @@ module.exports = class PSpectrum extends (Plugin) {
     uninject();
 
     // unregister settings tab
-    powercord.api.settings.unregisterSettings('pspectrum');
+    powercord.api.settings.unregisterSettings("pspectrum");
   }
 };

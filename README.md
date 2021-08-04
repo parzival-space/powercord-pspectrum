@@ -13,7 +13,7 @@ The powercord team will not give you support (this is an unsupported plugin) and
 
 ## Installation
 
-1. Go to your powercord plugins folder. Run ``git clone https://github.com/malte-linke/powercord-pspectrum.git``
+1. Go to your powercord plugins folder. Run `git clone https://github.com/malte-linke/powercord-pspectrum.git`
 2. Restart discord to fetch missing plugins.
 
 ---
@@ -22,6 +22,7 @@ The powercord team will not give you support (this is an unsupported plugin) and
 
 You can add support for your themes by modifying the styles of the #pspectrum-visualizer.<br>
 For example, this code adds support for the <a href="https://github.com/CorellanStoma/CreArts-Discord">Crearts</a> Theme:
+
 ```css
 #pspectrum-visualizer {
   border-radius: var(--radius-primary);
@@ -34,15 +35,16 @@ For example, this code adds support for the <a href="https://github.com/Corellan
 
 ### Since 1.2.0
 
-The ``--pspectrum-color`` css variable has been splitted into four sub-variables (for each user status one: online, idle, dnd and invisible).<br>
-PSpectrum still trys to use ``--spotify-color``, ``--pspectrum-color`` and ``#1ed860`` as fallback values, so your quick css and themes should still work.<br>
+The `--pspectrum-color` css variable has been splitted into four sub-variables (for each user status one: online, idle, dnd and invisible).<br>
+PSpectrum still trys to use `--spotify-color`, `--pspectrum-color` and `#1ed860` as fallback values, so your quick css and themes should still work.<br>
 Now you can specify custom color for each user state:
+
 ```css
 #pspectrum-visualizer {
-  --pspectrum-online-color: #1ED860;
-  --pspectrum-idle-color: #D8D51E;
-  --pspectrum-dnd-color: #D81E1E;
-  --pspectrum-invisible-color: #4F4F4F;
+  --pspectrum-online-color: #1ed860;
+  --pspectrum-idle-color: #d8d51e;
+  --pspectrum-dnd-color: #d81e1e;
+  --pspectrum-invisible-color: #4f4f4f;
 }
 ```
 
