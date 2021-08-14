@@ -37,6 +37,14 @@ const Settings = ({ getSetting, updateSetting }) => {
       </SliderInput>
 
       <SwitchItem
+        note="If activated, the frequencies of the Visualizer will be centered.."
+        value={getSetting("visualizerCenter", true)}
+        onChange={() => updateSetting("visualizerCenter", !getSetting("visualizerCenter", true))}
+      >
+        Center Frequencies
+      </SwitchItem>
+
+      <SwitchItem
         note="If enabled, allows you to change the visualizer's color manually instead of using the colors managed by your theme (or quick css)."
         value={getSetting("manualTheming", false)}
         onChange={() =>
@@ -50,7 +58,7 @@ const Settings = ({ getSetting, updateSetting }) => {
         name="Design"
         description="Allows you to change the design of the visualizer. This will override the settings provided by your theme. You must have 'Switch to manual theming' enabled for this to work."
         disabled={getSetting("manualTheming", false)}
-        opened={getSetting("designSettings", false)}
+        opened={getSetting("designSettings", false) && getSetting("manualTheming", false)}
         onChange={() =>
           updateSetting("designSettings", !getSetting("designSettings", false))
         }
