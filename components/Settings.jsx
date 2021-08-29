@@ -4,6 +4,7 @@ const {
   SliderInput,
   SwitchItem,
   ColorPickerInput,
+  TextInput,
 } = require("powercord/components/settings");
 
 const Settings = ({ getSetting, updateSetting }) => {
@@ -15,6 +16,20 @@ const Settings = ({ getSetting, updateSetting }) => {
       .toString(16)
       .padStart(2, "0")}${b.toString(16).padStart(2, "0")}`;
   };
+
+  var validate = (size, min, max) => {
+
+    if (size < min) {
+      return min;
+    }
+    
+    if (size > max) {
+
+      return max;
+    }
+
+    return size;
+  }
 
   return (
     <div>
@@ -43,6 +58,22 @@ const Settings = ({ getSetting, updateSetting }) => {
       >
         Center Frequencies
       </SwitchItem>
+
+      <TextInput
+        note="Changes the amount of space between each column. Higher numbers mean more space between columns. (Default: 1)"
+        value={(getSetting("padding", 1)).toString()}
+        onChange={(value) => updateSetting("padding", validate(Number(value), 1, 20))}
+      >
+        Padding
+      </TextInput>
+
+      <TextInput
+        note="Changes the size of the audio buffer array. Higher numbers mean more columns but also more lag. (Default: 60)"
+        value={(getSetting("bufferSize", 60)).toString()}
+        onChange={(value) => updateSetting("bufferSize", validate(Number(value), 2, 4096))}
+      >
+        Buffer Size (Requires Restart)
+      </TextInput>
 
       <SwitchItem
         note="If enabled, allows you to change the visualizer's color manually instead of using the colors managed by your theme (or quick css)."
