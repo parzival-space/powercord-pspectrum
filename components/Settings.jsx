@@ -150,6 +150,14 @@ const Settings = ({ getSetting, updateSetting }) => {
         >
           Log Audio Array
         </SwitchItem>
+        
+        <SwitchItem
+          note="Enables the quick reload hotkey: SHIFT + ALT + V"
+          value={getSetting("secretReloadKey", false)}
+          onChange={(value) => updateSetting("secretReloadKey", value)}
+        >
+          Enable Debug Hotkey
+        </SwitchItem>
 
         <div>
           Online: #{getSetting("color-online", "1ed860")}
