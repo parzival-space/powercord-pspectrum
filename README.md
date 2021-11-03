@@ -1,4 +1,4 @@
-# PSpectrum Audio Visualizer
+# PSpectrum Audio Visualizer [![wakatime](https://wakatime.com/badge/github/malte-linke/powercord-pspectrum.svg)](https://wakatime.com/badge/github/malte-linke/powercord-pspectrum)
 
 Adds an audio visualizer behind the user modal. <br>
 This Plugin ships an executeable with it (PSpectrum.exe), which means **this plugin only works for Windows**.<br>
