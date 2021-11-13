@@ -36,6 +36,7 @@ const Settings = ({ getSetting, updateSetting }) => {
       <SliderInput
         note="Sets the multiplier of the visualizer. Higher numbers mean higher responsiveness."
         required={true}
+        style={{ marginTop: "16px" }}
         minValue={1}
         maxValue={20}
         defaultValue={4}
@@ -53,6 +54,7 @@ const Settings = ({ getSetting, updateSetting }) => {
 
       <SwitchItem
         note="If activated, the frequencies of the Visualizer will be centered.."
+        style={{ marginTop: "16px" }}
         value={getSetting("visualizerCenter", true)}
         onChange={() => updateSetting("visualizerCenter", !getSetting("visualizerCenter", true))}
       >
@@ -60,6 +62,7 @@ const Settings = ({ getSetting, updateSetting }) => {
       </SwitchItem>
 
       <TextInput
+        style={{ marginTop: "16px" }}
         note="Changes the amount of space between each column. Higher numbers mean more space between columns. (Default: 1)"
         value={(getSetting("padding", 1)).toString()}
         onChange={(value) => updateSetting("padding", validate(Number(value), 1, 20))}
@@ -68,6 +71,7 @@ const Settings = ({ getSetting, updateSetting }) => {
       </TextInput>
 
       <TextInput
+        style={{ marginTop: "16px" }}
         note="Changes the size of the audio buffer array. Higher numbers mean more columns but also more lag. (Default: 60)"
         value={(getSetting("bufferSize", 60)).toString()}
         onChange={(value) => updateSetting("bufferSize", validate(Number(value), 2, 4096))}
@@ -76,6 +80,7 @@ const Settings = ({ getSetting, updateSetting }) => {
       </TextInput>
 
       <SwitchItem
+        style={{ marginTop: "16px" }}
         note="If enabled, allows you to change the visualizer's color manually instead of using the colors managed by your theme (or quick css)."
         value={getSetting("manualTheming", false)}
         onChange={() =>
@@ -87,12 +92,14 @@ const Settings = ({ getSetting, updateSetting }) => {
 
       <Category
         name="Design"
+        style={{ display: getSetting("manualTheming", false) == false ? "none;" : "block;" }}
         description="Allows you to change the design of the visualizer. This will override the settings provided by your theme. You must have 'Switch to manual theming' enabled for this to work."
         disabled={getSetting("manualTheming", false)}
         opened={getSetting("designSettings", false) && getSetting("manualTheming", false)}
         onChange={() =>
           updateSetting("designSettings", !getSetting("designSettings", false))
         }
+        
       >
         <ColorPickerInput
           note={"The visualizers color when your status is 'Online'."}
