@@ -8,7 +8,7 @@ The builds of PSpectrum get automatically pushed to this Repository using GitHub
 
 ## Support
 
-If you need help, please create an issue in the "Issues" tab or contact <a href="https://discord.com/users/249877580180750336">me</a> on Discord (Parzival#0002). I will look into it as soon as possible.</br>
+If you need help, please create an issue in the "Issues" tab or contact <a href="https://discord.com/users/249877580180750336">me</a> on Discord (Parzival#9999). I will look into it as soon as possible.</br>
 The powercord team will not give you support (this is an unsupported plugin) and we don't need to stress them out more than they already are.<br>
 For more information, click <a href="https://canary.discord.com/channels/538759280057122817/755015856945102891/863040768041418782">here</a>. (You need to be on the Powercord Discord)
 
