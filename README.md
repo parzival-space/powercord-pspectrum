@@ -1,4 +1,9 @@
 # PSpectrum Audio Visualizer
+> Adds an audio visualizer behind the user modal. 
+
+![Version][version-image]
+![Size][size-image]
+![License][license-image]
 
 Adds an audio visualizer behind the user modal. <br>
 This Plugin ships an executeable with it (PSpectrum.exe), which means **this plugin only works for Windows**.<br>
@@ -6,61 +11,71 @@ You can find the source for the executeable here: <a href="https://github.com/ma
 
 The builds of PSpectrum get automatically pushed to this Repository using GitHub Actions.
 
-## Support
-
-If you need help, please create an issue in the "Issues" tab or contact <a href="https://discord.com/users/249877580180750336">me</a> on Discord (Parzival#9999). I will look into it as soon as possible.</br>
-The powercord team will not give you support (this is an unsupported plugin) and we don't need to stress them out more than they already are.<br>
-For more information, click <a href="https://canary.discord.com/channels/538759280057122817/755015856945102891/863040768041418782">here</a>. (You need to be on the Powercord Discord)
+![][demo-image]
 
 ## Installation
 
-1. Go to your powercord plugins folder. Run `git clone https://github.com/malte-linke/powercord-pspectrum.git`
+1. Open your powercord plugins directory and run `git clone https://github.com/malte-linke/powercord-pspectrum.git`.
 2. Restart discord to fetch missing plugins.
 
----
+## Theme Support
 
-## Styling
-
-You can add support for your themes by modifying the styles of the #pspectrum-visualizer.<br>
-For example, this code adds support for the <a href="https://github.com/CorellanStoma/CreArts-Discord">Crearts</a> Theme:
+You can add support for your themes by modifying the styles of the `#pspectrum-visualizer` class.<br>
 
 ```css
 #pspectrum-visualizer {
-  border-radius: var(--radius-primary);
-  --pspectrum-online-color: var(--accent-primary);
-  --pspectrum-idle-color: var(--accent-primary);
-  --pspectrum-dnd-color: var(--accent-primary);
-  --pspectrum-invisible-color: var(--accent-primary);
+  --pspectrum-online-color: #1ed860;    /* changes the color of the visualizer when the user is online */
+  --pspectrum-idle-color: #d8d51e;      /* same as above but for idle */
+  --pspectrum-dnd-color: #d81e1e;       /* same as above but for dnd */
+  --pspectrum-invisible-color: #4f4f4f; /* same as above but for invisible */
 }
 ```
 
-### Since 1.2.0
+If none of the above variables are found, PSpectrum will try to fallback to the following values in the following order:
 
-The `--pspectrum-color` css variable has been splitted into four sub-variables (for each user status one: online, idle, dnd and invisible).<br>
-PSpectrum still trys to use `--spotify-color`, `--pspectrum-color` and `#1ed860` as fallback values, so your quick css and themes should still work.<br>
-Now you can specify custom color for each user state:
+  * `--pspectrum-color` (Fallback from previous versions)
+  * `--spotify-color` (For users who have the Spotify plugin installed)
+  * `#1ed860`
 
-```css
-#pspectrum-visualizer {
-  --pspectrum-online-color: #1ed860;
-  --pspectrum-idle-color: #d8d51e;
-  --pspectrum-dnd-color: #d81e1e;
-  --pspectrum-invisible-color: #4f4f4f;
-}
-```
+## Release History
 
-### Also new since 1.2.0
+* 2.1.2
+    * I forgot the changes since 1.2.0...
+* 1.2.0
+    * Added custom color per user status
+    * Splitted the `--pspectrum-color` into multiple sub-variables
+* 1.1.0
+    * Added custom color support (Added `--pspectrum-color` with fallback to `--spotify-color`)
+* 1.0.0
+    * First release
 
-You can now customize the colors of the visualizer without the need to use quick css.<br>
-Just enable 'Manual Theming' in the settings and you get a new color picker for each user status.<br>
+## Meta
 
-<details>
-  <summary>Demo Image</summary>
-  <img src="https://i.imgur.com/eXlE6QQ.png">
-</details>
+Malte Linke – [Parzival#9999](https://discord.com/users/249877580180750336)
 
----
+Distributed under the MIT license. See ``LICENSE`` for more information.
 
-## Demo
+[https://github.com/malte-linke](https://github.com/malte-linke)
 
-<img src="https://i.imgur.com/lDy75tH.gif">
+## Contributing
+
+1. Fork it (<https://github.com/yourname/yourproject/fork>)
+2. Create your feature branch (`git checkout -b feature/fooBar`)
+3. Commit your changes (`git commit -am 'Add some fooBar'`)
+4. Push to the branch (`git push origin feature/fooBar`)
+5. Create a new Pull Request
+
+<!-- Markdown link & img dfn's -->
+[version-image]: https://img.shields.io/github/manifest-json/v/malte-linke/powercord-pspectrum?style=flat-square
+[license-image]: https://img.shields.io/github/license/malte-linke/powercord-pspectrum?style=flat-square
+[size-image]: https://img.shields.io/github/size/malte-linke/powercord-pspectrum/index.js?style=flat-square
+[demo-image]: https://i.imgur.com/eiubeXY.gif
+
+
+## Other Plugins
+
+Check out my other plugins for [Powercord](https://powercord.dev/plugins/):
+
+  - [BeatRPC](https://github.com/malte-linke/powercord-beatrpc) - A more detailed Beat Saber RPC
+  - [PRadio](https://github.com/malte-linke/powercord-pradio) - Stream radio in Discord
+  - [PSpectrum](https://github.com/malte-linke/powercord-pspectrum) - Audio visualizer for Discord
