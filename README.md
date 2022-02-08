@@ -79,3 +79,4 @@ Check out my other plugins for [Powercord](https://powercord.dev/plugins/):
   - [BeatRPC](https://github.com/malte-linke/powercord-beatrpc) - A more detailed Beat Saber RPC
   - [PRadio](https://github.com/malte-linke/powercord-pradio) - Stream radio in Discord
   - [PSpectrum](https://github.com/malte-linke/powercord-pspectrum) - Audio visualizer for Discord
+  - [VR Audio Switch](https://github.com/malte-linke/powercord-vraudioswitch) - Automatically switch Input and Output to VR
