@@ -7,7 +7,7 @@
 
 Adds an audio visualizer behind the user modal. <br>
 This Plugin ships an executeable with it (PSpectrum.exe), which means **this plugin only works for Windows**.<br>
-You can find the source for the executeable here: <a href="https://github.com/malte-linke/PSpectrum">malte-linke/PSpectrum</a>
+You can find the source for the executeable here: <a href="https://github.com/parzival-space/PSpectrum">parzival-space/PSpectrum</a>
 
 The builds of PSpectrum get automatically pushed to this Repository using GitHub Actions.
 
@@ -15,7 +15,7 @@ The builds of PSpectrum get automatically pushed to this Repository using GitHub
 
 ## Installation
 
-1. Open your powercord plugins directory and run `git clone https://github.com/malte-linke/powercord-pspectrum.git`.
+1. Open your powercord plugins directory and run `git clone https://github.com/parzival-space/powercord-pspectrum.git`.
 2. Restart discord to fetch missing plugins.
 
 ## Theme Support
@@ -55,7 +55,7 @@ Malte Linke – [Parzival#9999](https://discord.com/users/249877580180750336)
 
 Distributed under the MIT license. See ``LICENSE`` for more information.
 
-[https://github.com/malte-linke](https://github.com/malte-linke)
+[https://github.com/parzival-space](https://github.com/parzival-space)
 
 ## Contributing
 
@@ -66,9 +66,9 @@ Distributed under the MIT license. See ``LICENSE`` for more information.
 5. Create a new Pull Request
 
 <!-- Markdown link & img dfn's -->
-[version-image]: https://img.shields.io/github/manifest-json/v/malte-linke/powercord-pspectrum?style=flat-square
-[license-image]: https://img.shields.io/github/license/malte-linke/powercord-pspectrum?style=flat-square
-[size-image]: https://img.shields.io/github/size/malte-linke/powercord-pspectrum/index.js?style=flat-square
+[version-image]: https://img.shields.io/github/manifest-json/v/parzival-space/powercord-pspectrum?style=flat-square
+[license-image]: https://img.shields.io/github/license/parzival-space/powercord-pspectrum?style=flat-square
+[size-image]: https://img.shields.io/github/size/parzival-space/powercord-pspectrum/index.js?style=flat-square
 [demo-image]: https://i.imgur.com/eiubeXY.gif
 
 
@@ -76,7 +76,7 @@ Distributed under the MIT license. See ``LICENSE`` for more information.
 
 Check out my other plugins for [Powercord](https://powercord.dev/plugins/):
 
-  - [BeatRPC](https://github.com/malte-linke/powercord-beatrpc) - A more detailed Beat Saber RPC
-  - [PRadio](https://github.com/malte-linke/powercord-pradio) - Stream radio in Discord
-  - [PSpectrum](https://github.com/malte-linke/powercord-pspectrum) - Audio visualizer for Discord
-  - [VR Audio Switch](https://github.com/malte-linke/powercord-vraudioswitch) - Automatically switch Input and Output to VR
+  - [BeatRPC](https://github.com/parzival-space/powercord-beatrpc) - A more detailed Beat Saber RPC
+  - [PRadio](https://github.com/parzival-space/powercord-pradio) - Stream radio in Discord
+  - [PSpectrum](https://github.com/parzival-space/powercord-pspectrum) - Audio visualizer for Discord
+  - [VR Audio Switch](https://github.com/parzival-space/powercord-vraudioswitch) - Automatically switch Input and Output to VR
