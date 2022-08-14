@@ -9,7 +9,7 @@ module.exports = class PSpectrum extends Plugin {
     // register settings
     powercord.api.settings.registerSettings("pspectrum", {
       category: this.entityID,
-      label: "PSpectrum",
+      label: "RSpectrum",
       render: Settings,
     });
 
@@ -18,15 +18,15 @@ module.exports = class PSpectrum extends Plugin {
       this,
       () =>
         console.log(
-          `%c[PSpectrum/Info]`,
+          `%c[RSpectrum/Info]`,
           `color: lime;`,
-          `Successfully injected PSpectrum!`
+          `Successfully injected RSpectrum!`
         ),
       (f) =>
         console.log(
-          `%c[PSpectrum/Failed]`,
+          `%c[RSpectrum/Failed]`,
           `color: red;`,
-          `Failed to inject PSpectrum: ${f}. Retrying...`
+          `Failed to inject RSpectrum: ${f}. Retrying...`
         )
     );
   }
