@@ -1,7 +1,7 @@
 {
-  "name": "PSpectrum Audio Visualizer",
-  "description": "Remember AudioViz? Good times. Shows a audio visualizer in Discord. Only works for windows.",
-  "author": "Parzival#9999",
-  "version": "2.1.2",
+  "name": "RSpectrum Audio Visualizer",
+  "description": "Remember AudioViz? Good times. Shows a audio visualizer in Discord. Only works for windows. Forked from Parzival's PSpectrum for Powercord.",
+  "author": "Mercy#9000",
+  "version": "2.1.3",
   "license": "MIT"
 }
