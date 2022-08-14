@@ -1,4 +1,4 @@
-# Mock
+# RSpectrum Audio Visualizer
 
 [Install in Replugged](https://replugged.dev/install?url=mercifulspace/replugged-rspectrum)
 
