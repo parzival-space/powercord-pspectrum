@@ -16,7 +16,7 @@ You can find the source for the executeable here: <a href="https://github.com/pa
 
 As Powercord has reached EOL, it is now recommendet to install this plugin using Replugged:
 
-<a href="">
+<a href="https://replugged.dev/install?url=parzival-space/powercord-pspectrum">
     <img src="https://img.shields.io/badge/-Install%20in%20Replugged-blue?style=for-the-badge&logo=none" alt="Install in Replugged">
 </a>
 
@@ -25,8 +25,8 @@ As Powercord has reached EOL, it is now recommendet to install this plugin using
 <details>
     <summary>Installing in Powercord (Depricated)</summary>
 
-    1. Open your powercord plugins directory and run `git clone https://github.com/parzival-space/powercord-pspectrum.git`.
-    2. Restart discord to fetch missing plugins.
+1. Open your powercord plugins directory and run `git clone https://github.com/parzival-space/powercord-pspectrum.git`.
+2. Restart discord to fetch missing plugins.
 </details>
 
 
