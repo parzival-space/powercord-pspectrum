@@ -14,7 +14,7 @@ You can find the source for the executeable here: <a href="https://github.com/pa
 
 ## Installation
 
-As Powercord has reached EOL, it is now recommendet to install this plugin using Replugged:
+As Powercord has reached EOL, it is now recommended to install this plugin with Replugged:
 
 <a href="https://replugged.dev/install?url=parzival-space/powercord-pspectrum">
     <img src="https://img.shields.io/badge/-Install%20in%20Replugged-blue?style=for-the-badge&logo=none" alt="Install in Replugged">
